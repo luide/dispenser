@@ -13,5 +13,5 @@ http://www.arduino.cc/playground/uploads/Code/Keypad.zip
 
 https://www.arduinolibraries.info/libraries/u8g2
 
-https://playground.arduino.cc/Code/Password/
+https://playground.arduino.cc/Code/Password
 
