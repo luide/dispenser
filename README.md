@@ -7,8 +7,6 @@ https://github.com/adafruit/RTClib
 
 https://github.com/lucadentella/TOTP-Arduino
 
-https://github.com/lucadentella/TOTP-Arduino
-
 http://www.arduino.cc/playground/uploads/Code/Keypad.zip
 
 https://www.arduinolibraries.info/libraries/u8g2
