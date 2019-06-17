@@ -43,12 +43,6 @@ Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
 U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C u8g2(U8G2_R0); //Inicializa e define display
 
-//## Função para parar motor ##
-void parar(){
-  digitalWrite(A2,LOW);
-  digitalWrite(A3,LOW);
-}
-
 //## Função dispensar produto ##
 void entregar(){
       while(digitalRead(A0) != LOW){
@@ -59,6 +53,7 @@ void entregar(){
         digitalWrite(A2,HIGH);
         digitalWrite(A3,LOW);
       }
+      //recua um pouco para poupar sensor fim de curso
       //while(digitalRead(A1) == LOW){
        // digitalWrite(A3,HIGH);
        // digitalWrite(A2,LOW);
