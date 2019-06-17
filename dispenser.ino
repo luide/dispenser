@@ -187,7 +187,7 @@ void setup(){
 void loop(){
   DateTime now = rtc.now();
   DateTime utm (now + TimeSpan(0,Fuso,0,0));
-  long GMT = now.unixtime();
+  long GMT = utm.unixtime();
   char* newCode = totp.getCode(GMT);
   if (Setup < 2){
     if(strcmp(code, newCode) != 0) {
@@ -199,15 +199,15 @@ void loop(){
       senha = 0;
       u8g2.clearBuffer();   
       u8g2.setFont(u8g2_font_pressstart2p_8r);
-      tmp=(utm.hour());
+      tmp=(now.hour());
       if ( tmp < 10 ){
         u8g2.setCursor(5, 8);   
         u8g2.print("0");
         u8g2.setCursor(13, 8);
-        u8g2.print(utm.hour());
+        u8g2.print(now.hour());
       }else{
         u8g2.setCursor(5, 8);
-        u8g2.print(utm.hour());
+        u8g2.print(now.hour());
       }       
       u8g2.setCursor(20, 8);
       u8g2.print(":"); 
