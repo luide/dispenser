@@ -310,9 +310,9 @@ void loop(){
       Setup = 0;  
       delay(1000);
      if ( T[2][1] >= 90 ){
-        Fuso= -(T[2][1]-90);
+        Fuso= (T[2][1]-90);
       }else{
-        Fuso= (T[2][1]);
+        Fuso= -(T[2][1]);
       }
       //##Configurar rtc
      rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
